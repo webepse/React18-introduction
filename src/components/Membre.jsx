@@ -8,13 +8,16 @@
 // }
  
 // export default Membre;
-
+import Affichage from "./Affichage";
 const Membre = ({nom, children, age}) => {
     return ( 
         <>
-            <h2
-                style={{backgroundColor: age < 35 ? 'dodgerblue':'crimson', color: 'white'}}
-            >Membre: {nom.toUpperCase()} - {age} ans</h2>
+            <Affichage 
+                nom={nom}
+                age={age}
+            />
+            <input type="text" value={nom} />&nbsp;
+            <button>X</button>
             {children ? <h1>{children}</h1> : null}
         </>
      );
